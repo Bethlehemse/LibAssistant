@@ -97,7 +97,7 @@ html,
   display: flex;
   flex-wrap: wrap;
   overflow: auto;
-  height: 95%;
+  height: 90%;
 }
 
 @media screen and (min-width: 1367px) {
@@ -109,7 +109,6 @@ html,
 
   .books-container .card:nth-child(5n + 1) {
     margin-left: 0;
-    background-color: red;
     width: 20%;
   }
 }
@@ -123,7 +122,6 @@ html,
 
   .books-container .card:nth-child(3n + 1) {
     margin-left: 0;
-    background-color: red;
     width: 33.333333%;
   }
 }
@@ -137,7 +135,6 @@ html,
 
   .books-container .card:nth-child(2n + 1) {
     margin-left: 0;
-    background-color: red;
     width: 50%;
   }
 }
