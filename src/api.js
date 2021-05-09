@@ -1,4 +1,7 @@
 import faker from 'faker';
+import axios from 'axios';
+
+const API_URL = 'http://localhost:3000';
 
 // TODO Mock books, remove after we have the api
 const BOOKS = [
@@ -23,4 +26,17 @@ export const getBooks = (searchString = '') => {
   }
 
   return BOOKS;
+};
+
+export const login = async (username, password) => {
+  try {
+    // await axios.post(`${API_URL}/login`, {
+    //   username,
+    //   password,
+    // });
+
+    return true;
+  } catch (err) {
+    return false;
+  }
 };

@@ -1,6 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
+import { login } from '../../api';
 
 export default () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const doLogin = async () => {
+    console.log(username, password);
+    if (await login(username, password)) {
+      // loggedin
+    } else {
+      //error, wrong password or missing username
+    }
+  };
+
   return (
     <div className='content-wrapper'>
       <div className='auth-inner'>
@@ -38,7 +51,11 @@ export default () => {
             </div>
           </div>
 
-          <button type='submit' className='btn btn-primary btn-block'>
+          <button
+            type='submit'
+            onClick={doLogin}
+            className='btn btn-primary btn-block'
+          >
             Submit
           </button>
           <p className='forgot-password text-right'>
